@@ -1,5 +1,11 @@
-# My Personal Website
+# Arnav Rao
 
-Welcome to my site. Below are my papers:
+## Research and Reports
+<a href="https://www.arnavrao.net/ChartingANewCourse.pdf" target="_blank">Charting a New Course: Steering U.S. Maritime Policy Towards Security and Prosperity</a>, <i>Open Markets Institute</i>, May 2025
 
-<a href="https://www.arnavrao.net/ChartingANewCourse.pdf" target="_blank">Charting a New Course: Steering U.S. Maritime Policy Towards Security and Prosperity</a>
+## Popular Writing
+
+## Other Writing
+
+
+
