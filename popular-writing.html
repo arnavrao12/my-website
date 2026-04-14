@@ -4,33 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Popular Writing | Arnav Rao</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        body { font-family: 'Inter', sans-serif; line-height: 1.7; color: #2D3748; background-color: #E2E8F0; margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; animation: fadeIn 0.6s ease-out; }
+        @keyframes smoothFade { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #1d1d1f; background-color: #fbfbfd; margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; -webkit-font-smoothing: antialiased; }
         
-        nav { background-color: #1A202C; padding: 30px 80px; display: flex; flex-wrap: wrap; justify-content: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        nav a { margin: 10px 25px; text-decoration: none; color: #A0AEC0; text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; transition: color 0.3s, transform 0.3s; display: inline-block; }
-        .active { color: #FBD38D !important; border-bottom: 2px solid #FBD38D; padding-bottom: 6px; }
-        @media (min-width: 769px) { nav a:hover { color: #FFFFFF; transform: translateY(-2px); } }
+        nav { position: sticky; top: 0; z-index: 100; background-color: rgba(251, 251, 253, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 15px 40px; display: flex; flex-wrap: wrap; justify-content: center; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        nav a { margin: 10px 20px; text-decoration: none; color: #86868b; font-size: 0.85rem; font-weight: 500; letter-spacing: -0.01em; transition: color 0.3s ease; }
+        nav a:hover, .active { color: #1d1d1f; }
 
-        main { background-color: #FAF9F6; max-width: 1000px; margin: 50px auto; padding: 60px; width: 92%; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); border-radius: 8px; border-top: 5px solid #9C4221; }
-        h1 { font-family: 'Lora', serif; font-size: 2.5rem; font-weight: 600; margin-bottom: 50px; color: #1A202C; text-align: left; }
+        main { max-width: 900px; margin: 0 auto; padding: 80px 40px 120px 40px; width: 100%; animation: smoothFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 50px; letter-spacing: -0.04em; color: #1d1d1f; text-align: left; }
         
-        .writing-entry { margin-bottom: 35px; display: grid; grid-template-columns: 240px 1fr; gap: 25px; align-items: baseline; border-bottom: 1px solid #EDF2F7; padding-bottom: 25px; }
-        .writing-meta { font-size: 0.75rem; color: #9C4221; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
-        .writing-title { font-size: 1.2rem; font-weight: 500; color: #1A202C; text-decoration: none; transition: all 0.3s; display: inline-block; }
-        @media (min-width: 769px) { .writing-title:hover { color: #9C4221; transform: translateX(5px); } }
+        .writing-entry { display: grid; grid-template-columns: 200px 1fr; gap: 20px; align-items: baseline; border-bottom: 1px solid rgba(0,0,0,0.08); padding: 24px 0; }
+        .writing-entry:last-child { border-bottom: none; }
+        .writing-meta { font-size: 0.85rem; color: #86868b; text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em; }
+        .writing-title { font-size: 1.25rem; font-weight: 500; color: #1d1d1f; text-decoration: none; letter-spacing: -0.015em; line-height: 1.4; transition: color 0.2s ease; }
+        @media (min-width: 769px) { .writing-title:hover { color: #0066cc; } }
 
         @media (max-width: 768px) {
-            body { animation: none; }
-            nav { padding: 20px 10px; }
-            nav a { margin: 8px 12px; font-size: 0.7rem; transition: none; transform: none; }
-            nav a:hover { color: #FBD38D; }
-            main { padding: 40px 25px; margin: 25px auto; width: 95%; }
-            h1 { text-align: center; font-size: 2.2rem; margin-bottom: 40px; }
-            .writing-entry { grid-template-columns: 1fr; gap: 8px; text-align: left; }
+            nav { padding: 10px 15px; }
+            nav a { margin: 8px 12px; font-size: 0.8rem; }
+            main { padding: 50px 25px 80px 25px; }
+            h1 { text-align: center; font-size: 2.5rem; margin-bottom: 30px; }
+            .writing-entry { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; text-align: left; }
+            .writing-title { font-size: 1.15rem; }
         }
     </style>
 </head>
@@ -45,32 +43,19 @@
     <main>
         <h1>Popular Writing</h1>
 
-        <article class="writing-entry"><div class="writing-meta">The Corner Newsletter • March 2026</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-next-railroad-crisis-and-sandeep-vaheesans-electric-essay-march-10th-2026" target="_blank" class="writing-title">Will a Union Pacific-Norfolk Southern Deal Further Wreck U.S. Railroads? The Past as Prologue</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">The Corner Newsletter • November 2025</div><a href="https://www.openmarketsinstitute.org/publications/corner-trumps-risky-port-deal" target="_blank" class="writing-title">U.S.-Brokered Deal with Hong Kong Ports Corporation Increases National Security Risk</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">Washington Monthly • October 2025</div><a href="https://washingtonmonthly.com/2025/10/09/trump-shipbuilding-failure/" target="_blank" class="writing-title">Trump Promised a Shipbuilding Boom. He’s Sinking It Instead</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">Washington Monthly • August 2025</div><a href="https://washingtonmonthly.com/2025/08/20/can-america-build-ships-again/" target="_blank" class="writing-title">Can America Build Ships Again?</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">Washington Monthly • August 2025</div><a href="https://washingtonmonthly.com/2025/08/06/railroad-merger-why-it-could-go-off-the-rails/" target="_blank" class="writing-title">Railroad Merger: Why It Could Go Off the Rails</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">Washington Monthly • June 2025</div><a href="https://washingtonmonthly.com/2025/06/30/how-to-save-american-shipbuilding/" target="_blank" class="writing-title">How to Fix Our Dangerous Dependency on Foreign Ships and Save American Shipbuilding</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">The Atlantic • May 2025</div><a href="https://www.theatlantic.com/economy/archive/2025/05/american-shipbuilding-decline/682945/" target="_blank" class="writing-title">How America Lost Control of the Seas</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">Washington Monthly • April 2025</div><a href="https://washingtonmonthly.com/2025/04/16/elon-musk-wants-to-privatize-amtrak-but-the-real-problem-is-freight-monopolies/" target="_blank" class="writing-title">Elon Musk Wants to Privatize Amtrak, But the Real Problem Is Freight Monopolies</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">The Corner Newsletter • April 2025</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-the-role-of-monopoly-in-amtraks-woes" target="_blank" class="writing-title">Monopolists and Republicans Derail Amtrak Even as Rider Demand Rises</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">The Hill • February 2025</div><a href="https://thehill.com/opinion/national-security/5141931-trumps-panama-canal-plan-is-another-loser-for-americas-maritime-industry/" target="_blank" class="writing-title">Trump’s Panama Canal Plan is Another Loser for America’s Maritime Industry</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">The Corner Newsletter • November 2024</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-november-21" target="_blank" class="writing-title">Ocean Freight Carriers’ Price-Gouging Poses Early Challenge to Trump Administration</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">Washington Monthly • October 2024 • Research Assistance</div><a href="https://washingtonmonthly.com/2024/10/29/train-drain/" target="_blank" class="writing-title">Train Drain</a></article>
-        
-        <article class="writing-entry"><div class="writing-meta">The Corner Newsletter • July 2024</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-july-03-2024" target="_blank" class="writing-title">Investors Continue to Loot Norfolk Southern Even After East Palestine Disaster</a></article>
-
+        <article class="writing-entry"><div class="writing-meta">The Corner Newsletter<br>March 2026</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-next-railroad-crisis-and-sandeep-vaheesans-electric-essay-march-10th-2026" target="_blank" class="writing-title">Will a Union Pacific-Norfolk Southern Deal Further Wreck U.S. Railroads? The Past as Prologue</a></article>
+        <article class="writing-entry"><div class="writing-meta">The Corner Newsletter<br>November 2025</div><a href="https://www.openmarketsinstitute.org/publications/corner-trumps-risky-port-deal" target="_blank" class="writing-title">U.S.-Brokered Deal with Hong Kong Ports Corporation Increases National Security Risk</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly<br>October 2025</div><a href="https://washingtonmonthly.com/2025/10/09/trump-shipbuilding-failure/" target="_blank" class="writing-title">Trump Promised a Shipbuilding Boom. He’s Sinking It Instead</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly<br>August 2025</div><a href="https://washingtonmonthly.com/2025/08/20/can-america-build-ships-again/" target="_blank" class="writing-title">Can America Build Ships Again?</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly<br>August 2025</div><a href="https://washingtonmonthly.com/2025/08/06/railroad-merger-why-it-could-go-off-the-rails/" target="_blank" class="writing-title">Railroad Merger: Why It Could Go Off the Rails</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly<br>June 2025</div><a href="https://washingtonmonthly.com/2025/06/30/how-to-save-american-shipbuilding/" target="_blank" class="writing-title">How to Fix Our Dangerous Dependency on Foreign Ships and Save American Shipbuilding</a></article>
+        <article class="writing-entry"><div class="writing-meta">The Atlantic<br>May 2025</div><a href="https://www.theatlantic.com/economy/archive/2025/05/american-shipbuilding-decline/682945/" target="_blank" class="writing-title">How America Lost Control of the Seas</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly<br>April 2025</div><a href="https://washingtonmonthly.com/2025/04/16/elon-musk-wants-to-privatize-amtrak-but-the-real-problem-is-freight-monopolies/" target="_blank" class="writing-title">Elon Musk Wants to Privatize Amtrak, But the Real Problem Is Freight Monopolies</a></article>
+        <article class="writing-entry"><div class="writing-meta">The Corner Newsletter<br>April 2025</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-the-role-of-monopoly-in-amtraks-woes" target="_blank" class="writing-title">Monopolists and Republicans Derail Amtrak Even as Rider Demand Rises</a></article>
+        <article class="writing-entry"><div class="writing-meta">The Hill<br>February 2025</div><a href="https://thehill.com/opinion/national-security/5141931-trumps-panama-canal-plan-is-another-loser-for-americas-maritime-industry/" target="_blank" class="writing-title">Trump’s Panama Canal Plan is Another Loser for America’s Maritime Industry</a></article>
+        <article class="writing-entry"><div class="writing-meta">The Corner Newsletter<br>November 2024</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-november-21" target="_blank" class="writing-title">Ocean Freight Carriers’ Price-Gouging Poses Early Challenge to Trump Administration</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly<br>October 2024<br><span style="color:#1d1d1f; font-weight:500;">Research Assistance</span></div><a href="https://washingtonmonthly.com/2024/10/29/train-drain/" target="_blank" class="writing-title">Train Drain</a></article>
+        <article class="writing-entry"><div class="writing-meta">The Corner Newsletter<br>July 2024</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-july-03-2024" target="_blank" class="writing-title">Investors Continue to Loot Norfolk Southern Even After East Palestine Disaster</a></article>
     </main>
 </body>
 </html>
