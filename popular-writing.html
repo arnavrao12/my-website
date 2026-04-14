@@ -9,18 +9,21 @@
         * { box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; line-height: 1.7; color: #2D3748; background-color: #FAF9F6; margin: 0; }
         nav { padding: 60px 80px 40px 80px; display: flex; flex-wrap: wrap; border-bottom: 1px solid #E2E8F0; }
-        nav a { margin-right: 40px; margin-bottom: 10px; text-decoration: none; color: #718096; text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; }
+        nav a { margin-right: 40px; margin-bottom: 10px; text-decoration: none; color: #718096; text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; transition: all 0.3s; display: inline-block; }
+        nav a:hover { color: #9C4221; transform: translateY(-2px); }
         .active { color: #1A202C !important; border-bottom: 2px solid #9C4221; padding-bottom: 8px; }
-        main { max-width: 950px; margin: 0 auto; padding: 60px 40px 100px 40px; }
+
+        main { max-width: 900px; margin: 0 auto; padding: 60px 40px 100px 40px; }
         h1 { font-family: 'Lora', serif; font-size: 2.5rem; font-weight: 600; margin-bottom: 60px; color: #1A202C; }
-        .writing-entry { margin-bottom: 35px; display: grid; grid-template-columns: 220px 1fr; gap: 30px; align-items: baseline; border-bottom: 1px solid #EDF2F7; padding-bottom: 25px; }
-        .writing-meta { font-size: 0.7rem; color: #9C4221; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
-        .writing-title { font-size: 1.2rem; font-weight: 500; color: #1A202C; text-decoration: none; transition: 0.2s; }
-        .writing-title:hover { color: #9C4221; }
+        .writing-entry { margin-bottom: 35px; border-bottom: 1px solid #EDF2F7; padding-bottom: 25px; }
+        .writing-meta { font-size: 0.75rem; color: #9C4221; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px; }
+        .writing-title { font-size: 1.25rem; font-weight: 500; color: #1A202C; text-decoration: none; transition: all 0.3s; display: inline-block; }
+        .writing-title:hover { color: #9C4221; transform: translateX(5px); }
+
         @media (max-width: 768px) {
             nav { padding: 30px 20px; justify-content: center; }
             h1 { text-align: center; }
-            .writing-entry { grid-template-columns: 1fr; gap: 5px; text-align: left; }
+            .writing-entry { text-align: left; }
         }
     </style>
 </head>
@@ -36,16 +39,16 @@
         <h1>Popular Writing</h1>
         <article class="writing-entry"><div class="writing-meta">The Corner • Mar 2026</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-next-railroad-crisis-and-sandeep-vaheesans-electric-essay-march-10th-2026" target="_blank" class="writing-title">Will a Union Pacific-Norfolk Southern Deal Further Wreck U.S. Railroads?</a></article>
         <article class="writing-entry"><div class="writing-meta">The Corner • Nov 2025</div><a href="https://www.openmarketsinstitute.org/publications/corner-trumps-risky-port-deal" target="_blank" class="writing-title">U.S.-Brokered Deal with Hong Kong Ports Increases National Security Risk</a></article>
-        <article class="writing-entry"><div class="writing-meta">Wash Monthly • Oct 2025</div><a href="https://washingtonmonthly.com/2025/10/09/trump-shipbuilding-failure/" target="_blank" class="writing-title">Trump Promised a Shipbuilding Boom. He’s Sinking It Instead</a></article>
-        <article class="writing-entry"><div class="writing-meta">Wash Monthly • Aug 2025</div><a href="https://washingtonmonthly.com/2025/08/20/can-america-build-ships-again/" target="_blank" class="writing-title">Can America Build Ships Again?</a></article>
-        <article class="writing-entry"><div class="writing-meta">Wash Monthly • Aug 2025</div><a href="https://washingtonmonthly.com/2025/08/06/railroad-merger-why-it-could-go-off-the-rails/" target="_blank" class="writing-title">Railroad Merger: Why It Could Go Off the Rails</a></article>
-        <article class="writing-entry"><div class="writing-meta">Wash Monthly • Jun 2025</div><a href="https://washingtonmonthly.com/2025/06/30/how-to-save-american-shipbuilding/" target="_blank" class="writing-title">How to Fix Our Dangerous Dependency on Foreign Ships</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly • Oct 2025</div><a href="https://washingtonmonthly.com/2025/10/09/trump-shipbuilding-failure/" target="_blank" class="writing-title">Trump Promised a Shipbuilding Boom. He’s Sinking It Instead</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly • Aug 2025</div><a href="https://washingtonmonthly.com/2025/08/20/can-america-build-ships-again/" target="_blank" class="writing-title">Can America Build Ships Again?</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly • Aug 2025</div><a href="https://washingtonmonthly.com/2025/08/06/railroad-merger-why-it-could-go-off-the-rails/" target="_blank" class="writing-title">Railroad Merger: Why It Could Go Off the Rails</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly • Jun 2025</div><a href="https://washingtonmonthly.com/2025/06/30/how-to-save-american-shipbuilding/" target="_blank" class="writing-title">How to Fix Our Dangerous Dependency on Foreign Ships</a></article>
         <article class="writing-entry"><div class="writing-meta">The Atlantic • May 2025</div><a href="https://www.theatlantic.com/economy/archive/2025/05/american-shipbuilding-decline/682945/" target="_blank" class="writing-title">How America Lost Control of the Seas</a></article>
-        <article class="writing-entry"><div class="writing-meta">Wash Monthly • Apr 2025</div><a href="https://washingtonmonthly.com/2025/04/16/elon-musk-wants-to-privatize-amtrak/" target="_blank" class="writing-title">The Real Problem Is Freight Monopolies, Not Amtrak Privatization</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly • Apr 2025</div><a href="https://washingtonmonthly.com/2025/04/16/elon-musk-wants-to-privatize-amtrak/" target="_blank" class="writing-title">The Real Problem Is Freight Monopolies, Not Amtrak Privatization</a></article>
         <article class="writing-entry"><div class="writing-meta">The Corner • Apr 2025</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-the-role-of-monopoly-in-amtraks-woes" target="_blank" class="writing-title">Monopolists and Republicans Derail Amtrak</a></article>
         <article class="writing-entry"><div class="writing-meta">The Hill • Feb 2025</div><a href="https://thehill.com/opinion/national-security/5141931-trumps-panama-canal-plan/" target="_blank" class="writing-title">Trump’s Panama Canal Plan is Another Loser for Maritime Industry</a></article>
         <article class="writing-entry"><div class="writing-meta">The Corner • Nov 2024</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-november-21" target="_blank" class="writing-title">Ocean Carriers’ Price-Gouging Poses Challenge to Trump Admin</a></article>
-        <article class="writing-entry"><div class="writing-meta">Wash Monthly • Oct 2024</div><a href="https://washingtonmonthly.com/2024/10/29/train-drain/" target="_blank" class="writing-title">Train Drain (Research Assistance)</a></article>
+        <article class="writing-entry"><div class="writing-meta">Washington Monthly • Oct 2024 • Research Assistance</div><a href="https://washingtonmonthly.com/2024/10/29/train-drain/" target="_blank" class="writing-title">Train Drain</a></article>
         <article class="writing-entry"><div class="writing-meta">The Corner • Jul 2024</div><a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-july-03-2024" target="_blank" class="writing-title">Investors Continue to Loot Norfolk Southern</a></article>
     </main>
 </body>
