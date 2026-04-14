@@ -7,20 +7,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.7; color: #2D3748; background-color: #FAF9F6; margin: 0; }
-        nav { padding: 60px 80px 40px 80px; display: flex; flex-wrap: wrap; border-bottom: 1px solid #E2E8F0; }
-        nav a { margin-right: 40px; margin-bottom: 10px; text-decoration: none; color: #718096; text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.7; 
+            color: #2D3748; 
+            background-color: #FAF9F6; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh; 
+        }
+        
+        /* Consistent Navigation */
+        nav { 
+            padding: 60px 80px 40px 80px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            border-bottom: 1px solid #E2E8F0; 
+        }
+        nav a { 
+            margin-right: 40px; 
+            margin-bottom: 10px; 
+            text-decoration: none; 
+            color: #718096; 
+            text-transform: uppercase; 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            letter-spacing: 1.5px; 
+            transition: all 0.3s ease; 
+            display: inline-block;
+        }
+        nav a:hover { color: #9C4221; transform: translateY(-2px); }
         .active { color: #1A202C !important; border-bottom: 2px solid #9C4221; padding-bottom: 8px; }
-        main { max-width: 900px; margin: 0 auto; padding: 60px 40px 100px 40px; }
-        h1 { font-family: 'Lora', serif; font-size: 2.5rem; font-weight: 600; margin-bottom: 60px; color: #1A202C; }
-        .contact-content { font-size: 1.2rem; color: #4A5568; max-width: 650px; }
-        .contact-links { margin-top: 40px; list-style: none; padding: 0; }
-        .contact-links li { margin-bottom: 20px; font-weight: 600; color: #1A202C; }
-        .contact-links a { color: #9C4221; text-decoration: none; border-bottom: 2px solid #FBD38D; }
+
+        main { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 60px 40px 100px 40px; 
+        }
+
+        h1 { 
+            font-family: 'Lora', serif; 
+            font-size: 2.5rem; 
+            font-weight: 600; 
+            margin-bottom: 60px; 
+            color: #1A202C; 
+        }
+
+        .contact-content { 
+            font-size: 1.2rem; 
+            color: #4A5568; 
+            max-width: 650px; 
+        }
+
+        .contact-links { 
+            margin-top: 40px; 
+            list-style: none; 
+            padding: 0; 
+        }
+
+        .contact-links li { 
+            margin-bottom: 25px; 
+            font-weight: 600; 
+            color: #1A202C; 
+            transition: all 0.3s ease;
+        }
+
+        .contact-links a { 
+            color: #9C4221; 
+            text-decoration: none; 
+            border-bottom: 2px solid #FBD38D; 
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .contact-links a:hover { 
+            background: #FBD38D; 
+            transform: translateX(5px);
+        }
+
+        .signal-handle {
+            color: #9C4221;
+            font-weight: 700;
+        }
+
         @media (max-width: 768px) {
             nav { padding: 30px 20px; justify-content: center; }
+            nav a { margin: 10px; }
             h1 { text-align: center; }
             .contact-content { text-align: center; margin: 0 auto; }
+            .contact-links a:hover { transform: translateY(-3px); }
         }
     </style>
 </head>
@@ -39,7 +116,7 @@
             <ul class="contact-links">
                 <li>Email: <a href="mailto:rao@openmarketsinstitute.org">rao@openmarketsinstitute.org</a></li>
                 <li>LinkedIn: <a href="https://www.linkedin.com/in/arnavrao" target="_blank">linkedin.com/in/arnavrao</a></li>
-                <li>Signal: <span style="color: #9C4221;">arnavrao.14</span></li>
+                <li>Signal: <span class="signal-handle">arnavrao.14</span></li>
             </ul>
         </div>
     </main>
