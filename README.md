@@ -8,9 +8,9 @@
   </p>
 
 ## Explore My Work
-<li><a href="https://www.arnavrao.net/reports" target="_blank">Reports</a></li>
-<li><a href="https://www.arnavrao.net/popularwriting" target="_blank">Popular Writing</a></li>
-<li><a href="https://www.arnavrao.net/otherwriting" target="_blank">Other Writing</a></li>
+<li><a href="https://www.arnavrao.net/reports">Reports</a></li>
+<li><a href="https://www.arnavrao.net/popularwriting">Popular Writing</a></li>
+<li><a href="https://www.arnavrao.net/otherwriting">Other Writing</a></li>
 
 
 
