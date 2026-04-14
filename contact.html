@@ -10,7 +10,7 @@
         @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         :root { --bg: #09090b; --text-main: #f8fafc; --text-muted: #94a3b8; --accent: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc); --border: rgba(255, 255, 255, 0.1); --card-bg: rgba(255, 255, 255, 0.03); }
         
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; -webkit-font-smoothing: antialiased;}
         body::before, body::after { content: ""; position: fixed; width: 500px; height: 500px; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.15; pointer-events: none; }
         body::before { top: -100px; left: -100px; background: #38bdf8; }
         body::after { bottom: -100px; right: -100px; background: #c084fc; }
@@ -24,21 +24,31 @@
         main { flex: 1; max-width: 900px; margin: 0 auto; padding: 80px 40px; width: 100%; animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 50px; background: var(--accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
         
-        .glass-panel { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 60px 40px; text-align: center; backdrop-filter: blur(10px); }
+        .glass-panel { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 60px 40px; text-align: center; backdrop-filter: blur(10px); width: 100%; }
         .contact-content { font-size: 1.25rem; color: var(--text-muted); line-height: 1.8; max-width: 600px; margin: 0 auto; }
         
-        .contact-links { margin-top: 40px; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 20px; align-items: center; }
-        .contact-links li { font-size: 1.15rem; color: #fff; font-weight: 500; display: flex; align-items: center; gap: 10px; }
+        .contact-links { margin-top: 40px; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 20px; align-items: center; width: 100%; }
+        
+        /* Overflow fix for mobile links */
+        .contact-links li { 
+            font-size: 1.15rem; color: #fff; font-weight: 500; 
+            width: 100%; /* Ensure it spans the box */
+            overflow-wrap: break-word; /* Breaks long URLs/Emails */
+            word-break: break-word; 
+        }
+        
         .contact-links a { color: #38bdf8; text-decoration: none; transition: color 0.2s; }
         .contact-links a:hover { color: #fff; text-shadow: 0 0 10px #38bdf8; }
-        .signal-handle { background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 6px; color: #c084fc; font-family: monospace; font-size: 1rem; }
+        .signal-handle { background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 6px; color: #c084fc; font-family: monospace; font-size: 1rem; display: inline-block; margin-top: 5px; }
 
         @media (max-width: 768px) {
-            nav { padding: 15px 10px; }
-            nav a { margin: 8px 12px; font-size: 0.75rem; }
+            nav { padding: 12px 10px; }
+            nav a { margin: 5px 10px; font-size: 0.75rem; }
             main { padding: 40px 20px; text-align: center; }
-            h1 { font-size: 2.8rem; }
-            .glass-panel { padding: 40px 20px; }
+            h1 { font-size: 2.5rem; margin-bottom: 30px; }
+            .glass-panel { padding: 30px 15px; }
+            .contact-content { font-size: 1rem; }
+            .contact-links li { font-size: 1rem; }
         }
     </style>
 </head>
@@ -55,9 +65,9 @@
         <div class="glass-panel">
             <p class="contact-content">I am based in Washington, D.C. If you would like to talk transportation, discuss collaborations, or request a copy of my resume, please feel free to reach out.</p>
             <ul class="contact-links">
-                <li>Email: <a href="mailto:rao@openmarketsinstitute.org">rao@openmarketsinstitute.org</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/arnavrao" target="_blank">linkedin.com/in/arnavrao</a></li>
-                <li>Signal: <span class="signal-handle">arnavrao.14</span></li>
+                <li>Email:<br><a href="mailto:rao@openmarketsinstitute.org">rao@openmarketsinstitute.org</a></li>
+                <li>LinkedIn:<br><a href="https://www.linkedin.com/in/arnavrao" target="_blank">linkedin.com/in/arnavrao</a></li>
+                <li>Signal:<br><span class="signal-handle">arnavrao.14</span></li>
             </ul>
         </div>
     </main>
