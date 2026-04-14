@@ -17,57 +17,28 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        nav { 
-            padding: 40px 60px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        nav a { 
-            margin-right: 30px; 
-            margin-bottom: 10px;
-            text-decoration: none; 
-            color: #999;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            transition: color 0.2s ease;
-        }
+        nav { padding: 40px 60px; display: flex; flex-wrap: wrap; }
+        nav a { margin-right: 30px; margin-bottom: 10px; text-decoration: none; color: #999; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; transition: color 0.2s ease; }
         nav a:hover { color: #000; }
         .active { color: #000; font-weight: 600; }
-
-        main {
-            flex: 1;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 12vh 40px 0 40px;
-        }
-        .container {
-            display: flex;
-            align-items: center;
-            max-width: 1000px;
-            width: 100%;
-        }
-        .content-left {
-            flex: 1.2;
-            padding-right: 60px;
-        }
+        main { flex: 1; display: flex; align-items: flex-start; justify-content: center; padding: 12vh 40px 0 40px; }
+        .container { display: flex; align-items: center; max-width: 1000px; width: 100%; }
+        .content-left { flex: 1.2; padding-right: 60px; }
         h1 { font-size: 1.7rem; font-weight: 600; margin-bottom: 15px; letter-spacing: -0.5px; }
         .bio { font-size: 1.05rem; color: #444; max-width: 480px; }
         .omi-link { color: #000; text-decoration: underline; text-underline-offset: 3px; }
-        
         .photo-right { flex: 1; display: flex; justify-content: flex-end; }
         .photo-right img { width: 320px; height: auto; border-radius: 4px; }
-
         @media (max-width: 768px) {
-            nav { padding: 20px; justify-content: center; }
-            nav a { margin: 10px; font-size: 0.75rem; }
-            main { padding-top: 5vh; }
+            nav { padding: 15px 10px; justify-content: center; }
+            nav a { margin: 5px 10px; font-size: 0.7rem; }
+            main { padding-top: 2vh; }
             .container { flex-direction: column-reverse; text-align: center; }
-            .content-left { padding-right: 0; margin-top: 30px; }
-            .photo-right { justify-content: center; }
-            .photo-right img { width: 220px; }
-            .bio { margin: 0 auto; }
+            .content-left { padding-right: 0; margin-top: 15px; }
+            h1 { font-size: 1.5rem; margin-bottom: 10px; text-align: center; }
+            .bio { font-size: 1rem; padding: 0 10px; }
+            .photo-right { justify-content: center; margin-bottom: 5px; }
+            .photo-right img { width: 160px; }
         }
     </style>
 </head>
@@ -83,15 +54,9 @@
         <div class="container">
             <div class="content-left">
                 <h1>Arnav Rao</h1>
-                <p class="bio">
-                    Hi! Welcome to my website. I am a transportation policy analyst at the 
-                    <a href="https://www.openmarketsinstitute.org" target="_blank" class="omi-link">Open Markets Institute</a>, 
-                    where I study the political economy of the transportation industry.
-                </p>
+                <p class="bio">Hi! Welcome to my website. I am a transportation policy analyst at the <a href="https://www.openmarketsinstitute.org" target="_blank" class="omi-link">Open Markets Institute</a>, where I study the political economy of the transportation industry.</p>
             </div>
-            <div class="photo-right">
-                <img src="arnav.jpg" alt="Arnav Rao">
-            </div>
+            <div class="photo-right"><img src="arnav.jpg" alt="Arnav Rao"></div>
         </div>
     </main>
 </body>
