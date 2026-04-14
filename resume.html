@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Arnav Rao</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1a1a1a; background-color: #ffffff; margin: 0; padding: 0; }
+        nav { padding: 40px 60px; font-size: 0.8rem; letter-spacing: 1px; }
+        nav a { margin-right: 30px; text-decoration: none; color: #999; text-transform: uppercase; }
+        nav a:hover { color: #000; }
+        .active { color: #000; font-weight: 600; }
+        main { max-width: 800px; margin: 0 auto; padding: 0 60px 100px 60px; }
+        h1 { font-size: 1.7rem; font-weight: 600; margin-bottom: 40px; letter-spacing: -0.5px; }
+        .resume-section { margin-bottom: 40px; }
+        .section-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #888; border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 20px; }
+        .resume-item { margin-bottom: 25px; }
+        .item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
+        .item-title { font-size: 1.1rem; font-weight: 600; }
+        .item-org { font-weight: 500; color: #444; }
+        .item-date { font-size: 0.9rem; color: #777; }
+        .item-details { margin: 0; padding-left: 1.2rem; font-size: 1rem; color: #333; }
+        .item-details li { margin-bottom: 8px; }
+        .print-btn { display: inline-block; margin-top: 20px; font-size: 0.8rem; color: #888; text-decoration: none; border: 1px solid #eee; padding: 5px 10px; border-radius: 4px; }
+        .print-btn:hover { background: #fafafa; color: #000; }
+        @media print { nav, .print-btn { display: none; } main { padding: 0; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="reports.html">Reports</a>
+        <a href="popular-writing.html">Popular Writing</a>
+        <a href="resume.html" class="active">Resume</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+        <h1>Resume</h1>
+        <section class="resume-section">
+            <div class="section-title">Experience</div>
+            <div class="resume-item">
+                <div class="item-header">
+                    <span class="item-title">Transportation Policy Analyst</span>
+                    <span class="item-date">Present</span>
+                </div>
+                <div class="item-org">Open Markets Institute</div>
+                <ul class="item-details">
+                    <li>Researching the political economy of the transportation industry, focusing on maritime logistics and freight rail concentration.</li>
+                    <li>Published "Charting a New Course," a report on U.S. maritime security and industrial policy.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="resume-section">
+            <div class="section-title">Education</div>
+            <div class="resume-item">
+                <div class="item-header">
+                    <span class="item-title">Undergraduate Degree</span>
+                    <span class="item-date">Graduation Year</span>
+                </div>
+                <div class="item-org">University Name</div>
+                <ul class="item-details">
+                    <li>GPA: 3.91</li>
+                </ul>
+            </div>
+        </section>
+        <section class="resume-section">
+            <div class="section-title">Skills</div>
+            <p class="item-details">
+                <strong>Policy:</strong> Antitrust, Logistics, Supply Chain Resilience, Political Economy.<br>
+                <strong>Technical:</strong> HTML/CSS, Research Methodology.
+            </p>
+        </section>
+        <a href="javascript:window.print()" class="print-btn">Download / Print PDF</a>
+    </main>
+</body>
+</html>
