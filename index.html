@@ -6,39 +6,57 @@
     <title>Arnav Rao</title>
     <style>
         * { box-sizing: border-box; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
             color: #1a1a1a;
-            background-color: #ffffff;
+            background-color: #fcfcfc; /* Soft paper white */
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            animation: fadeIn 0.6s ease-out;
         }
-        nav { padding: 40px 60px; display: flex; flex-wrap: wrap; }
-        nav a { margin-right: 30px; margin-bottom: 10px; text-decoration: none; color: #999; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; transition: color 0.2s ease; }
-        nav a:hover { color: #000; }
-        .active { color: #000; font-weight: 600; }
+
+        nav { padding: 50px 60px; display: flex; flex-wrap: wrap; }
+        nav a { 
+            margin-right: 35px; 
+            margin-bottom: 10px;
+            text-decoration: none; 
+            color: #888;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover { color: #2c5282; } /* Subtle Blue Accent */
+        .active { color: #000 !important; font-weight: 700; border-bottom: 2px solid #000; padding-bottom: 4px; }
+
         main { flex: 1; display: flex; align-items: flex-start; justify-content: center; padding: 12vh 40px 0 40px; }
-        .container { display: flex; align-items: center; max-width: 1000px; width: 100%; }
-        .content-left { flex: 1.2; padding-right: 60px; }
-        h1 { font-size: 1.7rem; font-weight: 600; margin-bottom: 15px; letter-spacing: -0.5px; }
-        .bio { font-size: 1.05rem; color: #444; max-width: 480px; }
-        .omi-link { color: #000; text-decoration: underline; text-underline-offset: 3px; }
+        .container { display: flex; align-items: center; max-width: 1050px; width: 100%; }
+        .content-left { flex: 1.2; padding-right: 80px; }
+        
+        h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.8px; color: #111; }
+        .bio { font-size: 1.15rem; color: #444; max-width: 520px; font-weight: 400; }
+        .omi-link { color: #2c5282; text-decoration: none; border-bottom: 1px solid #cbd5e0; transition: all 0.2s; }
+        .omi-link:hover { background: #ebf8ff; border-bottom-color: #2c5282; }
+        
         .photo-right { flex: 1; display: flex; justify-content: flex-end; }
-        .photo-right img { width: 320px; height: auto; border-radius: 4px; }
+        .photo-right img { width: 340px; height: auto; border-radius: 6px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+
         @media (max-width: 768px) {
-            nav { padding: 15px 10px; justify-content: center; }
-            nav a { margin: 5px 10px; font-size: 0.7rem; }
-            main { padding-top: 2vh; }
+            nav { padding: 25px 15px; justify-content: center; }
+            nav a { margin: 8px 12px; font-size: 0.7rem; }
+            main { padding-top: 3vh; }
             .container { flex-direction: column-reverse; text-align: center; }
-            .content-left { padding-right: 0; margin-top: 15px; }
-            h1 { font-size: 1.5rem; margin-bottom: 10px; text-align: center; }
-            .bio { font-size: 1rem; padding: 0 10px; }
-            .photo-right { justify-content: center; margin-bottom: 5px; }
-            .photo-right img { width: 160px; }
+            .content-left { padding-right: 0; margin-top: 25px; }
+            h1 { font-size: 1.8rem; text-align: center; }
+            .bio { font-size: 1.05rem; }
+            .photo-right img { width: 180px; }
         }
     </style>
 </head>
