@@ -18,25 +18,25 @@
         .active { color: var(--text-main) !important; position: relative; }
         .active::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 2px; background: var(--accent-gradient); border-radius: 2px; }
 
-        main { flex: 1; max-width: 800px; margin: 0 auto; padding: 60px 40px; width: 100%; animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        main { flex: 1; max-width: 950px; margin: 0 auto; padding: 60px 40px; width: 100%; animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         h1 { font-size: 3.2rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 40px; color: var(--text-main); text-align: left; }
         
-        .pastel-panel { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 60px 40px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01); width: 100%; }
-        .blog-desc { font-size: 1.25rem; color: var(--text-muted); line-height: 1.8; max-width: 550px; margin: 0 auto 40px auto; font-weight: 400; }
-        
-        .embed-container { max-width: 480px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05); }
-        
-        .sub-link { display: block; margin-top: 30px; font-size: 1.05rem; font-weight: 500; color: var(--text-main); }
-        .sub-link a { color: var(--accent-solid); text-decoration: none; transition: color 0.2s; }
-        .sub-link a:hover { color: var(--text-main); text-decoration: underline; text-underline-offset: 4px; }
+        .blog-grid { display: grid; gap: 15px; }
+        .blog-entry { display: grid; grid-template-columns: 140px 1fr; gap: 25px; align-items: center; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 22px 28px; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.01); }
+        .blog-entry:hover { transform: translateX(5px); border-color: #c7d2fe; box-shadow: 0 10px 20px rgba(0,0,0,0.03); }
+        .blog-date { font-size: 0.8rem; color: var(--accent-solid); font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; line-height: 1.5; }
+        .blog-title { font-size: 1.2rem; font-weight: 600; color: var(--text-main); text-decoration: none; letter-spacing: -0.01em; line-height: 1.4; transition: color 0.2s ease; }
+        .blog-title:hover { color: var(--accent-solid); }
+        .blog-excerpt { font-size: 0.95rem; color: var(--text-muted); margin-top: 6px; font-weight: 400; line-height: 1.5; }
 
         @media (max-width: 768px) {
             nav { padding: 10px 10px; }
             nav a { margin: 5px 8px; font-size: 0.7rem; }
             main { padding: 40px 20px; text-align: center; }
             h1 { font-size: 2.5rem; margin-bottom: 30px; }
-            .pastel-panel { padding: 30px 15px; }
-            .blog-desc { font-size: 1.05rem; margin-bottom: 30px; }
+            .blog-entry { grid-template-columns: 1fr; gap: 8px; padding: 18px; text-align: left; }
+            .blog-title { font-size: 1.05rem; }
+            .blog-excerpt { display: none; } /* Hide excerpts on mobile for a cleaner look */
         }
     </style>
 </head>
@@ -50,15 +50,34 @@
         <a href="contact.html">Contact</a>
     </nav>
     <main>
-        <h1>Newsletter</h1>
-        <div class="pastel-panel">
-            <p class="blog-desc">Subscribe to get my latest analysis on the political economy of the transportation industry delivered straight to your inbox.</p>
+        <h1>Blog</h1>
+        
+        <div class="blog-grid">
             
-            <div class="embed-container">
-                <iframe src="https://arnavrao.substack.com/embed" width="100%" height="320" style="background:#fff; border: none;" frameborder="0" scrolling="no"></iframe>
-            </div>
+            <article class="blog-entry">
+                <div class="blog-date">Apr 14, 2026</div>
+                <div>
+                    <a href="post-autonomous-freight.html" class="blog-title">The Political Economy of the Robotaxi Stack</a>
+                    <div class="blog-excerpt">Examining how automation in transit and freight shifts power dynamics away from labor.</div>
+                </div>
+            </article>
 
-            <p class="sub-link">Or read the archive at <a href="https://arnavrao.substack.com" target="_blank">arnavrao.substack.com</a></p>
+            <article class="blog-entry">
+                <div class="blog-date">Apr 02, 2026</div>
+                <div>
+                    <a href="post-houthi-red-sea.html" class="blog-title">How Red Sea Disruptions Expose Supply Chain Fragility</a>
+                    <div class="blog-excerpt">Analyzing structural impacts of blank sailings and detention fees on global shipping logistics.</div>
+                </div>
+            </article>
+
+            <article class="blog-entry">
+                <div class="blog-date">Mar 15, 2026</div>
+                <div>
+                    <a href="post-neo-brandeis-rail.html" class="blog-title">A Neo-Brandeisian View on Freight Monopolies</a>
+                    <div class="blog-excerpt">Why classical antitrust frameworks fail to address the concentration in the US rail industry.</div>
+                </div>
+            </article>
+
         </div>
     </main>
 </body>
