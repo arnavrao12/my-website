@@ -16,101 +16,35 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
-        nav { 
-            padding: 40px 60px;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-        }
-        nav a { 
-            margin-right: 30px; 
-            text-decoration: none; 
-            color: #999;
-            text-transform: uppercase;
-            transition: color 0.2s ease;
-        }
+        nav { padding: 40px 60px; font-size: 0.8rem; letter-spacing: 1px; }
+        nav a { margin-right: 30px; text-decoration: none; color: #999; text-transform: uppercase; transition: color 0.2s ease; }
         nav a:hover { color: #000; }
-
-        /* Adjusted for a "higher" feel on the screen */
-        main {
-            flex: 1;
-            display: flex;
-            align-items: flex-start; /* Changed from center to top-aligned */
-            justify-content: center;
-            padding: 12vh 40px 0 40px; /* 12vh padding-top pushes it exactly where it looks best */
-        }
-
-        .container {
-            display: flex;
-            align-items: center;
-            max-width: 1000px;
-            width: 100%;
-        }
-
-        .content-left {
-            flex: 1.2;
-            padding-right: 60px;
-        }
-
-        h1 { 
-            font-size: 1.7rem; 
-            font-weight: 600;
-            margin-bottom: 15px;
-            letter-spacing: -0.5px;
-        }
-
-        .bio { 
-            font-size: 1.05rem; 
-            color: #444;
-            max-width: 480px;
-        }
-
-        .omi-link {
-            color: #000;
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            transition: opacity 0.2s;
-        }
-        .omi-link:hover {
-            opacity: 0.7;
-        }
-
-        .photo-right {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        /* Responsive adjustments */
+        .active { color: #000; font-weight: 600; }
+        main { flex: 1; display: flex; align-items: flex-start; justify-content: center; padding: 12vh 40px 0 40px; }
+        .container { display: flex; align-items: center; max-width: 1000px; width: 100%; }
+        .content-left { flex: 1.2; padding-right: 60px; }
+        h1 { font-size: 1.7rem; font-weight: 600; margin-bottom: 15px; letter-spacing: -0.5px; }
+        .bio { font-size: 1.05rem; color: #444; max-width: 480px; }
+        .omi-link { color: #000; text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
+        .omi-link:hover { opacity: 0.7; }
+        .photo-right { flex: 1; display: flex; justify-content: flex-end; }
         @media (max-width: 768px) {
             main { padding-top: 5vh; }
-            .container {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-            .content-left {
-                padding-right: 0;
-                margin-top: 40px;
-            }
-            .photo-right {
-                justify-content: center;
-            }
-            .bio {
-                margin: 0 auto;
-            }
+            .container { flex-direction: column-reverse; text-align: center; }
+            .content-left { padding-right: 0; margin-top: 40px; }
+            .photo-right { justify-content: center; }
+            .bio { margin: 0 auto; }
         }
     </style>
 </head>
 <body>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="reports.html">Reports</a>
-    <a href="popular-writing.html">Popular Writing</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="reports.html">Reports</a>
+        <a href="popular-writing.html">Popular Writing</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+    </nav>
     <main>
         <div class="container">
             <div class="content-left">
@@ -121,12 +55,10 @@
                     where I study the political economy of the transportation industry.
                 </p>
             </div>
-
             <div class="photo-right">
                 <img src="arnav.jpg" alt="Arnav Rao" style="width: 320px; height: auto; border-radius: 4px;">
             </div>
         </div>
     </main>
-
 </body>
 </html>
