@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arnav Rao</title>
     <style>
+        /* General Setup */
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Cleaner font */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1a1a1a;
             background-color: #ffffff;
             margin: 0;
             padding: 0;
@@ -17,72 +18,111 @@
             min-height: 100vh;
         }
 
-        /* Navigation */
+        /* Navigation - clean and minimalist */
         nav { 
             padding: 40px 60px;
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
         }
         nav a { 
-            margin-right: 25px; 
+            margin-right: 30px; 
             text-decoration: none; 
-            color: #888; /* Muted color for now */
+            color: #999;
             text-transform: uppercase;
+            transition: color 0.2s ease;
         }
         nav a:hover { color: #000; }
 
-        /* Main Layout Container */
+        /* Centering the entire content block on the page */
+        main {
+            flex: 1; /* Fills the remaining vertical space */
+            display: flex;
+            align-items: center; /* Vertically centers the text and photo */
+            justify-content: center; /* Horizontally centers the whole group */
+            padding: 0 40px;
+        }
+
         .container {
             display: flex;
-            flex-wrap: wrap; /* Helps with mobile screens */
-            padding: 0 60px;
-            margin-top: 5vh; /* Pushes content down slightly */
-            max-width: 1100px;
+            align-items: center;
+            max-width: 1000px;
+            width: 100%;
         }
 
-        /* Left side: Text content */
+        /* Left Side: Text */
         .content-left {
-            flex: 1; /* Takes up half the space */
-            min-width: 300px;
-            padding-right: 40px;
-        }
-
-        /* Right side: Photo placeholder */
-        .photo-right {
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Styling the image placeholder */
-        .photo-right img {
-            max-width: 100%;
-            height: auto;
-            /* Optional: border-radius: 4px; */
+            flex: 1.2;
+            padding-right: 60px;
         }
 
         h1 { 
-            font-size: 1.8rem; /* Smaller name */
+            font-size: 1.7rem; 
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             letter-spacing: -0.5px;
         }
 
         .bio { 
-            font-size: 1.1rem; 
-            color: #444; 
-            max-width: 500px; /* Keeps line length readable */
+            font-size: 1.05rem; 
+            color: #444;
+            max-width: 480px;
         }
 
-        /* Specifically styling the OMI link */
+        /* The Open Markets Link */
         .omi-link {
-            color: #000 !important; /* Forces it to be black */
+            color: #000;
             text-decoration: underline;
-            font-weight: 500;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s;
         }
         .omi-link:hover {
-            color: #555 !important;
+            opacity: 0.7;
+        }
+
+        /* Right Side: Photo */
+        .photo-right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .photo-placeholder {
+            width: 320px;
+            height: 420px;
+            background: #fcfcfc;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .content-left {
+                padding-right: 0;
+                margin-top: 40px;
+            }
+            .photo-right {
+                justify-content: center;
+            }
+            .bio {
+                margin: 0 auto;
+            }
+            nav {
+                padding: 30px 20px;
+                text-align: center;
+            }
+            nav a {
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
@@ -97,22 +137,24 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <div class="container">
-        <div class="content-left">
-            <h1>Arnav Rao</h1>
-            <p class="bio">
-                Hi! Welcome to my website. I am a transportation policy analyst at the 
-                <a href="https://www.openmarketsinstitute.org" target="_blank" class="omi-link">Open Markets Institute</a>, 
-                where I study the political economy of the transportation industry.
-            </p>
-        </div>
+    <main>
+        <div class="container">
+            <div class="content-left">
+                <h1>Arnav Rao</h1>
+                <p class="bio">
+                    Hi! Welcome to my website. I am a transportation policy analyst at the 
+                    <a href="https://www.openmarketsinstitute.org" target="_blank" class="omi-link">Open Markets Institute</a>, 
+                    where I study the political economy of the transportation industry.
+                </p>
+            </div>
 
-        <div class="photo-right">
-            <div style="width: 300px; height: 400px; background: #f9f9f9; border: 1px dashed #ccc; display: flex; align-items: center; justify-content: center; color: #aaa;">
-                Photo Space
+            <div class="photo-right">
+                <div class="photo-placeholder">
+                    Photo Space
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
 </body>
 </html>
