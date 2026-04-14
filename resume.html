@@ -10,7 +10,7 @@
         @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         :root { --bg: #09090b; --text-main: #f8fafc; --text-muted: #94a3b8; --accent: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc); --border: rgba(255, 255, 255, 0.1); --card-bg: rgba(255, 255, 255, 0.03); }
         
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; -webkit-font-smoothing: antialiased;}
         body::before, body::after { content: ""; position: fixed; width: 500px; height: 500px; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.15; pointer-events: none; }
         body::before { top: -100px; left: -100px; background: #38bdf8; }
         body::after { bottom: -100px; right: -100px; background: #c084fc; }
@@ -30,11 +30,12 @@
         .cta-link:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(129, 140, 248, 0.4); }
 
         @media (max-width: 768px) {
-            nav { padding: 15px 10px; }
-            nav a { margin: 8px 12px; font-size: 0.75rem; }
+            nav { padding: 12px 10px; }
+            nav a { margin: 5px 10px; font-size: 0.75rem; }
             main { padding: 40px 20px; text-align: center; }
-            h1 { font-size: 2.8rem; }
+            h1 { font-size: 2.5rem; margin-bottom: 30px; }
             .glass-panel { padding: 40px 20px; }
+            .resume-cta { font-size: 1.1rem; }
         }
     </style>
 </head>
