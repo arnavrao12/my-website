@@ -10,7 +10,7 @@
         @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         :root { --bg: #09090b; --text-main: #f8fafc; --text-muted: #94a3b8; --accent: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc); --border: rgba(255, 255, 255, 0.1); --card-bg: rgba(255, 255, 255, 0.03); }
         
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text-main); margin: 0; display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; -webkit-font-smoothing: antialiased;}
         body::before, body::after { content: ""; position: fixed; width: 500px; height: 500px; border-radius: 50%; filter: blur(120px); z-index: -1; opacity: 0.15; pointer-events: none; }
         body::before { top: -100px; left: -100px; background: #38bdf8; }
         body::after { bottom: -100px; right: -100px; background: #c084fc; }
@@ -28,15 +28,17 @@
         .writing-entry { display: grid; grid-template-columns: 200px 1fr; gap: 30px; align-items: center; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 25px 30px; transition: all 0.3s ease; }
         .writing-entry:hover { transform: translateX(5px); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.06); box-shadow: -10px 0 20px rgba(129, 140, 248, 0.1); }
         .writing-meta { font-size: 0.85rem; color: #818cf8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.5; }
-        .writing-title { font-size: 1.25rem; font-weight: 600; color: #fff; text-decoration: none; letter-spacing: -0.01em; line-height: 1.4; }
+        .writing-title { font-size: 1.25rem; font-weight: 600; color: #fff; text-decoration: none; letter-spacing: -0.01em; line-height: 1.4; transition: color 0.2s ease; }
+        .writing-title:hover { color: #38bdf8; }
         .research-tag { display: inline-block; background: rgba(192, 132, 252, 0.2); color: #c084fc; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; margin-top: 8px; font-weight: 700; }
 
         @media (max-width: 768px) {
-            nav { padding: 15px 10px; }
-            nav a { margin: 8px 12px; font-size: 0.75rem; }
+            nav { padding: 12px 10px; }
+            nav a { margin: 5px 10px; font-size: 0.75rem; }
             main { padding: 40px 20px; text-align: center; }
-            h1 { font-size: 2.8rem; margin-bottom: 30px; }
+            h1 { font-size: 2.5rem; margin-bottom: 30px; }
             .writing-entry { grid-template-columns: 1fr; gap: 10px; padding: 20px; text-align: left; }
+            .writing-title { font-size: 1.1rem; }
         }
     </style>
 </head>
