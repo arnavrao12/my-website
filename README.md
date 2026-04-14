@@ -1,12 +1,16 @@
 # Arnav Rao
+### Transportation Policy Analyst at the Open Markets Institute
 
-## Research and Reports
-<a href="https://www.arnavrao.net/ChartingANewCourse.pdf" target="_blank">Charting a New Course: Steering U.S. Maritime Policy Towards Security and Prosperity</a>, <i>Open Markets Institute</i>, May 2025
+<p>
+  I am a transportation policy analyst at the 
+  <a href="https://www.openmarketsinstitute.org" target="_blank">Open Markets Institute</a> 
+  in Washington, D.C. My work focuses on the political economy of transportation, where I study the business practices and public policies that shape the transportation industry.
+  </p>
 
-## Popular Writing
-<a href="https://www.openmarketsinstitute.org/publications/the-corner-newsletter-july-03-2024" target="_blank">Investors Continue to Loot Norfolk Southern Even After East Palestine Disaster</a>, <i>The Corner Newsletter</i>, July 2024
-
-## Other Writing
+## Explore My Work
+<a href="https://www.arnavrao.net/reports" target="_blank">Reports</a>
+<a href="https://www.arnavrao.net/popularwriting" target="_blank">Popular Writing</a>
+<a href="https://www.arnavrao.net/otherwriting" target="_blank">Other Writing</a>
 
 
 
