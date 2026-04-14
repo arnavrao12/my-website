@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arnav Rao</title>
     <style>
-        /* General Setup */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -18,7 +17,6 @@
             min-height: 100vh;
         }
 
-        /* Navigation - clean and minimalist */
         nav { 
             padding: 40px 60px;
             font-size: 0.8rem;
@@ -33,13 +31,13 @@
         }
         nav a:hover { color: #000; }
 
-        /* Centering the entire content block on the page */
+        /* Adjusted for a "higher" feel on the screen */
         main {
-            flex: 1; /* Fills the remaining vertical space */
+            flex: 1;
             display: flex;
-            align-items: center; /* Vertically centers the text and photo */
-            justify-content: center; /* Horizontally centers the whole group */
-            padding: 0 40px;
+            align-items: flex-start; /* Changed from center to top-aligned */
+            justify-content: center;
+            padding: 12vh 40px 0 40px; /* 12vh padding-top pushes it exactly where it looks best */
         }
 
         .container {
@@ -49,7 +47,6 @@
             width: 100%;
         }
 
-        /* Left Side: Text */
         .content-left {
             flex: 1.2;
             padding-right: 60px;
@@ -68,7 +65,6 @@
             max-width: 480px;
         }
 
-        /* The Open Markets Link */
         .omi-link {
             color: #000;
             text-decoration: underline;
@@ -79,29 +75,15 @@
             opacity: 0.7;
         }
 
-        /* Right Side: Photo */
         .photo-right {
             flex: 1;
             display: flex;
             justify-content: flex-end;
         }
 
-        .photo-placeholder {
-            width: 320px;
-            height: 420px;
-            background: #fcfcfc;
-            border: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ccc;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Mobile adjustments */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
+            main { padding-top: 5vh; }
             .container {
                 flex-direction: column-reverse;
                 text-align: center;
@@ -115,13 +97,6 @@
             }
             .bio {
                 margin: 0 auto;
-            }
-            nav {
-                padding: 30px 20px;
-                text-align: center;
-            }
-            nav a {
-                margin: 0 10px;
             }
         }
     </style>
@@ -149,8 +124,8 @@
             </div>
 
             <div class="photo-right">
-    <img src="arnav.jpg" alt="Arnav Rao" style="width: 320px; height: auto; border-radius: 4px;">
-</div>
+                <img src="arnav.jpg" alt="Arnav Rao" style="width: 320px; height: auto; border-radius: 4px;">
+            </div>
         </div>
     </main>
 
