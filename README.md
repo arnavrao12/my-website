@@ -1,3 +1,12 @@
+<style>
+  header ul,
+  header p.view,
+  header small {
+    display: none !important;
+  }
+</style>
+
+
 # Arnav Rao
 ### Transportation Policy Analyst at the Open Markets Institute
 
