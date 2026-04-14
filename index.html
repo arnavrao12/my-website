@@ -4,58 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arnav Rao</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         
         body {
-            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.7;
-            color: #1a1a1a;
-            background-color: #fcfcfc; /* Soft paper white */
+            color: #2D3748; /* Dark Slate */
+            background-color: #FAF9F6; /* Warm Paper White */
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            animation: fadeIn 0.6s ease-out;
+            animation: fadeIn 0.8s ease-in;
         }
 
-        nav { padding: 50px 60px; display: flex; flex-wrap: wrap; }
+        nav { 
+            padding: 60px 80px 40px 80px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            border-bottom: 1px solid #E2E8F0; /* Thin 'blueprint' line */
+        }
+        
         nav a { 
-            margin-right: 35px; 
+            margin-right: 40px; 
             margin-bottom: 10px;
             text-decoration: none; 
-            color: #888;
+            color: #718096;
             text-transform: uppercase;
             font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 1.2px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
             transition: all 0.3s ease;
         }
-        nav a:hover { color: #2c5282; } /* Subtle Blue Accent */
-        .active { color: #000 !important; font-weight: 700; border-bottom: 2px solid #000; padding-bottom: 4px; }
+        nav a:hover { color: #9C4221; } /* Rust Accent */
+        .active { color: #1A202C !important; border-bottom: 2px solid #9C4221; padding-bottom: 8px; }
 
-        main { flex: 1; display: flex; align-items: flex-start; justify-content: center; padding: 12vh 40px 0 40px; }
-        .container { display: flex; align-items: center; max-width: 1050px; width: 100%; }
-        .content-left { flex: 1.2; padding-right: 80px; }
+        main { flex: 1; display: flex; align-items: flex-start; justify-content: center; padding: 10vh 40px 0 40px; }
+        .container { display: flex; align-items: center; max-width: 1100px; width: 100%; }
         
-        h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.8px; color: #111; }
-        .bio { font-size: 1.15rem; color: #444; max-width: 520px; font-weight: 400; }
-        .omi-link { color: #2c5282; text-decoration: none; border-bottom: 1px solid #cbd5e0; transition: all 0.2s; }
-        .omi-link:hover { background: #ebf8ff; border-bottom-color: #2c5282; }
+        .content-left { flex: 1.2; padding-right: 80px; position: relative; }
         
-        .photo-right { flex: 1; display: flex; justify-content: flex-end; }
-        .photo-right img { width: 340px; height: auto; border-radius: 6px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        /* The personality splash: a subtle serif for the name */
+        h1 { 
+            font-family: 'Lora', serif;
+            font-size: 2.8rem; 
+            font-weight: 600; 
+            margin-bottom: 25px; 
+            letter-spacing: -1px; 
+            color: #1A202C; 
+        }
+
+        .bio { font-size: 1.2rem; color: #4A5568; max-width: 520px; }
+        
+        .omi-link { 
+            color: #9C4221; 
+            text-decoration: none; 
+            font-weight: 600;
+            box-shadow: inset 0 -2px 0 #FBD38D; /* Gold highlight */
+            transition: all 0.2s;
+        }
+        .omi-link:hover { box-shadow: inset 0 -20px 0 #FBD38D; color: #1A202C; }
+        
+        .photo-right { flex: 1; display: flex; justify-content: flex-end; position: relative; }
+        
+        /* Adding a subtle colored shape behind the photo for personality */
+        .photo-right::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            background: #E2E8F0;
+            top: -20px;
+            right: -20px;
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+        .photo-right img { 
+            width: 340px; 
+            height: auto; 
+            border-radius: 2px; 
+            filter: grayscale(10%) contrast(105%); /* Gives it a more 'editorial' feel */
+        }
 
         @media (max-width: 768px) {
-            nav { padding: 25px 15px; justify-content: center; }
-            nav a { margin: 8px 12px; font-size: 0.7rem; }
-            main { padding-top: 3vh; }
+            nav { padding: 30px 20px; justify-content: center; }
+            nav a { margin: 10px; font-size: 0.7rem; }
+            main { padding-top: 5vh; }
             .container { flex-direction: column-reverse; text-align: center; }
-            .content-left { padding-right: 0; margin-top: 25px; }
-            h1 { font-size: 1.8rem; text-align: center; }
-            .bio { font-size: 1.05rem; }
+            .content-left { padding-right: 0; margin-top: 40px; }
+            h1 { font-size: 2.2rem; }
+            .photo-right::before { display: none; }
             .photo-right img { width: 180px; }
         }
     </style>
@@ -72,9 +115,15 @@
         <div class="container">
             <div class="content-left">
                 <h1>Arnav Rao</h1>
-                <p class="bio">Hi! Welcome to my website. I am a transportation policy analyst at the <a href="https://www.openmarketsinstitute.org" target="_blank" class="omi-link">Open Markets Institute</a>, where I study the political economy of the transportation industry.</p>
+                <p class="bio">
+                    Hi! I am a transportation policy analyst at the 
+                    <a href="https://www.openmarketsinstitute.org" target="_blank" class="omi-link">Open Markets Institute</a>, 
+                    studying the political economy of the industries that move the world.
+                </p>
             </div>
-            <div class="photo-right"><img src="arnav.jpg" alt="Arnav Rao"></div>
+            <div class="photo-right">
+                <img src="arnav.jpg" alt="Arnav Rao">
+            </div>
         </div>
     </main>
 </body>
