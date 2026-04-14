@@ -18,37 +18,22 @@
         .active { color: var(--text-main) !important; position: relative; }
         .active::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 100%; height: 2px; background: var(--accent-gradient); border-radius: 2px; }
 
-        main { flex: 1; max-width: 900px; margin: 0 auto; padding: 60px 40px; width: 100%; animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        main { flex: 1; max-width: 800px; margin: 0 auto; padding: 60px 40px; width: 100%; animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         h1 { font-size: 3.2rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 40px; color: var(--text-main); text-align: left; }
         
-        .resume-panel { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 50px 60px; box-shadow: 0 4px 6px rgba(0,0,0,0.01); }
-        
-        .section-title { font-size: 1.5rem; font-weight: 800; color: var(--text-main); border-bottom: 2px solid var(--bg); padding-bottom: 10px; margin-top: 40px; margin-bottom: 25px; letter-spacing: -0.02em; }
-        .section-title:first-child { margin-top: 0; }
-
-        .resume-item { margin-bottom: 30px; }
-        .resume-item:last-child { margin-bottom: 0; }
-        
-        .resume-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
-        .company-name { font-size: 1.2rem; font-weight: 700; color: var(--text-main); }
-        .date { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); white-space: nowrap; }
-        
-        .role-title { font-size: 1.05rem; font-weight: 600; color: var(--accent-solid); margin-bottom: 10px; }
-        
-        .resume-bullets { margin: 0; padding-left: 20px; color: var(--text-main); line-height: 1.6; }
-        .resume-bullets li { margin-bottom: 8px; font-size: 0.95rem; }
-        .resume-bullets li::marker { color: var(--accent-solid); }
+        .pastel-panel { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 60px 40px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.01); }
+        .resume-cta { font-size: 1.25rem; color: var(--text-muted); line-height: 1.8; font-weight: 400; }
+        .cta-link { display: inline-block; margin-top: 25px; padding: 14px 32px; background: var(--accent-gradient); color: var(--text-main); font-weight: 700; border-radius: 30px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; }
+        .cta-link:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(199, 210, 254, 0.5); }
 
         @media (max-width: 768px) {
             nav { padding: 10px 10px; }
             nav a { margin: 5px 8px; font-size: 0.7rem; }
-            main { padding: 40px 20px; }
-            h1 { font-size: 2.5rem; margin-bottom: 30px; text-align: center; }
-            .resume-panel { padding: 30px 25px; }
-            .resume-header { flex-direction: column; align-items: flex-start; }
-            .date { margin-top: 2px; font-size: 0.85rem; }
-            .company-name { font-size: 1.1rem; }
-            .resume-bullets { padding-left: 15px; }
+            main { padding: 40px 20px; text-align: center; }
+            h1 { font-size: 2.5rem; margin-bottom: 30px; }
+            .pastel-panel { padding: 40px 20px; }
+            .resume-cta { font-size: 1rem; }
+            .cta-link { font-size: 0.85rem; padding: 12px 28px; }
         }
     </style>
 </head>
@@ -62,108 +47,9 @@
     </nav>
     <main>
         <h1>Resume</h1>
-        <div class="resume-panel">
-            
-            <h2 class="section-title">Education</h2>
-            <div class="resume-item">
-                <div class="resume-header">
-                    <span class="company-name">Georgia Institute of Technology</span>
-                    <span class="date">May 2023</span>
-                </div>
-                <div class="role-title">B.S., Public Policy with Minor in Law, Science, and Technology</div>
-                <ul class="resume-bullets">
-                    <li><strong>Honors:</strong> Highest Honors, Liam Rattray Award (Faculty-selected award for academic excellence, leadership, and entrepreneurship), Best Public Policy Capstone Project.</li>
-                    <li><strong>Activities:</strong> Undergraduate Research, College Democrats (VP of Service and Events), Resident Assistant, Tutoring.</li>
-                </ul>
-            </div>
-
-            <h2 class="section-title">Experience</h2>
-            
-            <div class="resume-item">
-                <div class="resume-header">
-                    <span class="company-name">Open Markets Institute</span>
-                    <span class="date">March 2024 - Present</span>
-                </div>
-                <div class="role-title">Policy Analyst, Transportation</div>
-                <ul class="resume-bullets">
-                    <li>Author long-form reports, briefs, and articles on the political economy of transportation by conducting original policy, legal, and economic analysis, with publications in The Atlantic, The Washington Monthly, and The Hill.</li>
-                    <li>Develop core transportation antimonopoly positions for the Open Markets Institute, and cultivate key relationships with journalists and policymakers to amplify these positions across major media and to elicit increased regulatory and congressional scrutiny of monopolistic transportation practices.</li>
-                    <li>Advance fair competition goals by drafting and submitting congressional testimony, federal regulatory comments, and agency letters advocating for greater public oversight of essential transportation infrastructure.</li>
-                </ul>
-            </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <span class="company-name">Office of Senator Jack Reed (D-RI)</span>
-                    <span class="date">November 2023 - February 2024</span>
-                </div>
-                <div class="role-title">Staff Assistant</div>
-                <ul class="resume-bullets">
-                    <li>Supervised a team of three interns, drafted policy-related response letters to constituent inquiries, and coordinated administrative functions of the front office.</li>
-                </ul>
-            </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <span class="company-name">Office of Senator Jon Ossoff (D-GA)</span>
-                    <span class="date">August 2023 - November 2023</span>
-                </div>
-                <div class="role-title">Legislative Intern</div>
-                <ul class="resume-bullets">
-                    <li>Drafted policy memos, vote recommendations, cosponsorship requests, event briefs, and constituent letters on transportation, housing, energy, environmental, agricultural, and economic policy.</li>
-                </ul>
-            </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <span class="company-name">Tesla</span>
-                    <span class="date">January 2023 - July 2023</span>
-                </div>
-                <div class="role-title">Federal and State Policy Intern</div>
-                <ul class="resume-bullets">
-                    <li>Authored a capstone paper proposing a comprehensive federal policy framework on privacy legislation for vehicle data.</li>
-                    <li>Wrote policy briefs on key regulatory and legislative issues, including EV tax credits, vehicle charging infrastructure, and autonomous vehicle policy.</li>
-                </ul>
-            </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <span class="company-name">Office of Congresswoman Carolyn Bordeaux (D-GA)</span>
-                    <span class="date">August 2022 - December 2022</span>
-                </div>
-                <div class="role-title">District Office Intern</div>
-                <ul class="resume-bullets">
-                    <li>Researched legislation and wrote briefs on issues including transportation, veterans' issues, and healthcare.</li>
-                    <li>Resolved constituent issues by serving as a liaison with federal agencies on matters including immigration, passports, Social Security, veterans benefits, tax, and military academy nominations.</li>
-                    <li>Compiled daily press clips, executed event logistics, and managed front office operations.</li>
-                </ul>
-            </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <span class="company-name">Zoox | Amazon's Autonomous Vehicle Subsidiary</span>
-                    <span class="date">May 2022 - August 2022</span>
-                </div>
-                <div class="role-title">Safety, Policy, and Regulatory Affairs Intern</div>
-                <ul class="resume-bullets">
-                    <li>Developed and presented a capstone project that established the deployment strategy for Zoox's autonomous vehicles in California and Nevada, specifically navigating state regulatory requirements.</li>
-                    <li>Formulated localized guides for first responders on safely interacting with autonomous Zoox vehicles.</li>
-                    <li>Engaged with and provided readouts for meetings in autonomous vehicle industry trade groups.</li>
-                </ul>
-            </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <span class="company-name">Union Pacific Railroad</span>
-                    <span class="date">June 2021 - May 2022</span>
-                </div>
-                <div class="role-title">External Relations Intern</div>
-                <ul class="resume-bullets">
-                    <li>Produced policy briefs and legislative research on freight transportation, labor, and environmental policy, and synthesized key takeaways from congressional, Surface Transportation Board, and industry trade group events.</li>
-                    <li>Advocated for UP's freight rail policy positions in meetings with members of Congress and staff.</li>
-                </ul>
-            </div>
-
+        <div class="pastel-panel">
+            <p class="resume-cta">For a copy of my resume, please reach out via my contact page.</p>
+            <a href="contact.html" class="cta-link">Get in Touch →</a>
         </div>
     </main>
 </body>
