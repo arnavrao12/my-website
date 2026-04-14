@@ -43,34 +43,28 @@
         }
 
         .writing-entry {
-            margin-bottom: 50px;
+            margin-bottom: 30px; /* Reduced spacing since there is no description */
         }
 
         .writing-meta {
-            font-size: 0.85rem;
-            color: #777;
+            font-size: 0.8rem;
+            color: #888;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 12px;
+            margin-bottom: 4px;
         }
 
         .writing-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            display: block;
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: inline-block;
             color: #000;
-            text-decoration: underline;
-            text-underline-offset: 4px;
+            text-decoration: none; /* Removed underline to match Reports page */
+            transition: opacity 0.2s ease;
         }
+        
         .writing-title:hover {
-            opacity: 0.7;
-        }
-
-        .writing-description {
-            font-size: 1.05rem;
-            color: #444;
-            margin-bottom: 15px;
+            opacity: 0.6; /* Subtle visual feedback instead of an underline */
         }
     </style>
 </head>
@@ -91,24 +85,3 @@
         <article class="writing-entry">
             <div class="writing-meta">Publication Name • Month Year</div>
             <a href="#" target="_blank" class="writing-title">
-                The Future of Urban Transit in an Autonomous Age
-            </a>
-            <p class="writing-description">
-                A brief overview or hook about the article. This should be 1-2 sentences explaining why the reader should click.
-            </p>
-        </article>
-
-        <article class="writing-entry">
-            <div class="writing-meta">Another Outlet • Month Year</div>
-            <a href="#" target="_blank" class="writing-title">
-                Why Transportation Policy is Economic Policy
-            </a>
-            <p class="writing-description">
-                Discussing the intersection of market concentration and logistics infrastructure.
-            </p>
-        </article>
-
-    </main>
-
-</body>
-</html>
