@@ -21,7 +21,8 @@
         main { flex: 1; max-width: 850px; margin: 0 auto; padding: 60px 40px; width: 100%; animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         h1 { font-size: 3.2rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 50px; color: var(--text-main); text-align: left; }
         
-        .report-entry { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 45px; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.01); }
+        .report-entry { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 45px; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.01); margin-bottom: 30px; }
+        .report-entry:last-child { margin-bottom: 0; }
         .report-entry:hover { transform: translateY(-3px); border-color: #c7d2fe; box-shadow: 0 10px 25px rgba(0,0,0,0.03); }
         .report-meta { font-size: 0.8rem; font-weight: 600; color: var(--accent-solid); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; }
         .report-title { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 18px; display: block; color: var(--text-main); text-decoration: none; line-height: 1.3; transition: color 0.2s ease; }
@@ -51,12 +52,21 @@
     </nav>
     <main>
         <h1>Reports</h1>
+        
+        <article class="report-entry">
+            <div class="report-meta">Open Markets Institute • July 2026</div>
+            <a href="https://static1.squarespace.com/static/5e449c8c3ef68d752f3e70dc/t/6a6783f2e599ed7f80af87d9/1785168882519/Industry+Spotlight_Container+Shipping+Industry_0726_WEB.pdf" target="_blank" class="report-title">Industry Spotlight: Creating a Publicly Accountable Ocean Supply Chain</a>
+            <p class="report-description">A report that explores how deregulation and consolidation have transformed container shipping into an industry defined by concentrated market power and fragile supply chains[span_3](start_span)[span_3](end_span). It details how a small number of foreign carriers use vessel-sharing alliances to coordinate capacity and exploit shippers through abusive practices like blank sailings and cargo rolling[span_4](start_span)[span_4](end_span). The paper outlines a new industrial policy strategy to restore public accountability by increasing regulatory oversight, enforcing nondiscrimination, and rebuilding domestic shipping capacity[span_5](start_span)[span_5](end_span).</p>
+            <a href="https://static1.squarespace.com/static/5e449c8c3ef68d752f3e70dc/t/6a6783f2e599ed7f80af87d9/1785168882519/Industry+Spotlight_Container+Shipping+Industry_0726_WEB.pdf" target="_blank" class="read-link">Read Full Report →</a>
+        </article>
+
         <article class="report-entry">
             <div class="report-meta">Open Markets Institute • May 2025</div>
             <a href="https://www.openmarketsinstitute.org/publications/charting-a-new-course-steering-us-maritime-policy-towards-security-and-prosperity" target="_blank" class="report-title">Charting a New Course: Steering the U.S. Maritime Industry Towards Security and Prosperity</a>
             <p class="report-description">A report that warns that decades of deregulation and offshoring have left the U.S. dangerously dependent on foreign-controlled ocean shipping, calling for urgent policy reforms to rebuild domestic maritime strength, protect national security, and stabilize the economy.</p>
             <a href="https://www.openmarketsinstitute.org/publications/charting-a-new-course-steering-us-maritime-policy-towards-security-and-prosperity" target="_blank" class="read-link">Read Full Report →</a>
         </article>
+
     </main>
 </body>
 </html>
